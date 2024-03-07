@@ -1,11 +1,12 @@
-# This is the basic workflow to get started with Actions
-
-name: Demo Workflow
+name: GitHub Actions Demo
 
 # Controls when the workflow will run
-on: [workflow_dispatch]
+on: CI
   # Triggers the workflow on push or pull
-
+  push:
+      branches:
+      - main
+      - release/*
 jobs:
   demo-job:
     runs-on: ubuntu-latest
